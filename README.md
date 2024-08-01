@@ -31,5 +31,5 @@ Este é meu primeiro projeto utilizando C#, .Net e Windows Forms. O projeto cons
 3. Execute o projeto.
 
 ## 📝| A fazer:
-- [ ] Implementar um banco de dados para armazenar os usuários cadastrados.
+- [X] Implementar um banco de dados para armazenar os usuários cadastrados.
 - [ ] Implementar um sistema de criptografia de senha.
