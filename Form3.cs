@@ -18,7 +18,7 @@ namespace meuPrimeiroProjeto
         }
 
         private void btn_criar_Click(object sender, EventArgs e)
-        {
+        { 
             if(txt_usuario.Text=="")
             {
                 MessageBox.Show("Por favor, informe o nome de usuário",
@@ -36,6 +36,10 @@ namespace meuPrimeiroProjeto
             }
             else
             {
+                Database db = new Database();
+                string query = $"INSERT INTO usuarios (usuario, senha) VALUES ('{txt_usuario.Text}', '{txt_senha.Text}')";
+                db.ExecuteNonQuery(query);
+
                 MessageBox.Show("Usuário criado com sucesso!",
                     "Sucesso",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);

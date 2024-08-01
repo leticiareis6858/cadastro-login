@@ -15,31 +15,48 @@ namespace meuPrimeiroProjeto
         public Form1()
         {
             InitializeComponent();
+            Database db = new Database();
+            db.CreateTables();
         }
 
         private void btn_entrar_Click(object sender, EventArgs e)
         {
-            if((txt_usuario.Text=="")|| (txt_usuario.Text !="admin"))
+            if (txt_usuario.Text == "")
             {
-                MessageBox.Show("Usuário inválido",
-                    "Campo obrigatório",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Por favor, informe o nome de usuário",
+                     "Informação",
+                     MessageBoxButtons.OK,
+                     MessageBoxIcon.Information);
             }
             else
-                if((txt_senha.Text=="") || (txt_senha.Text!="admin"))
+                if (txt_senha.Text == "")
             {
-                MessageBox.Show("Senha inválida",
-                    "Campo obrigatório",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Por favor, informe uma senha",
+                   "Informação",
+                   MessageBoxButtons.OK,
+                   MessageBoxIcon.Information);
             }
             else
             {
-                Form2 form2 = new Form2();
-                form2.txt_usuario.Text = txt_usuario.Text;
+                Database db = new Database();
+                string query = $"SELECT * FROM usuarios WHERE usuario = '{txt_usuario.Text}' AND senha = '{txt_senha.Text}'";
+                DataTable result = db.ExecuteQuery(query);
 
-                this.Hide();
-                form2.ShowDialog();
-                this.Close();
+                if (result.Rows.Count > 0)
+                {
+                    Form2 form2 = new Form2();
+                    form2.txt_usuario.Text = txt_usuario.Text;
+
+                    this.Hide();
+                    form2.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Usuário ou senha inválidos",
+                        "Erro de autenticação",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 

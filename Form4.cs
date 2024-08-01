@@ -35,7 +35,12 @@ namespace meuPrimeiroProjeto
                     MessageBoxIcon.Information);
             }
             else
+            if(txt_usuario.Text !=null && txt_senha.Text != null)
             {
+                Database db = new Database();
+                string query = $"UPDATE usuarios SET senha = '{txt_senha.Text}' WHERE usuario = '{txt_usuario.Text}'";
+                db.ExecuteNonQuery(query);
+
                 MessageBox.Show("Senha alterada com sucesso!",
                     "Sucesso",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -45,6 +50,12 @@ namespace meuPrimeiroProjeto
                 this.Hide();
                 form1.ShowDialog();
                 this.Close();
+            }
+           else
+            {
+                MessageBox.Show("Usuário ou senha inválidos",
+                    "Erro de autenticação",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
