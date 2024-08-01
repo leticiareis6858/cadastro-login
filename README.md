@@ -11,8 +11,8 @@ Este é meu primeiro projeto utilizando C#, .Net e Windows Forms. O projeto cons
 ## 📷|Screenshots:
 
 ### Tela de login:
-![image](/imagens/form1.login.png)
-![image](/imagens/form1.login2.png)
+![image](/imagens/form1-login.png)
+![image](/imagens/form1-login2.png)
 
 ### Tela de boas-vindas:
 ![image](/imagens/form2-boasvindas.png)
