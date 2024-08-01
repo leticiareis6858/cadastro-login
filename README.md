@@ -12,18 +12,18 @@ Este é meu primeiro projeto utilizando C#, .Net e Windows Forms. O projeto cons
 
 ### Tela de login:
 ![image](/imagens/form1.login.png)
-![image](/imagens/form1.loginusuarioesenha.png)
+![image](/imagens/form1.login2.png)
 
 ### Tela de boas-vindas:
 ![image](/imagens/form2-boasvindas.png)
 
 ### Tela de cadastro de usuário:
-![image](/imagens/form3-criarusuario.png)
-![image](/imagens/form3-sucesso.png)
+![image](/imagens/form3-cadastro.png)
+![image](/imagens/form3-cadastro2.png)
 
 ### Tela de alteração de senha:
-![image](/imagens/form4-mudarsenha.png)
-![image](/imagens/form4-sucesso.png)
+![image](/imagens/form4-alterarsenha.png)
+![image](/imagens/form4-alterarsenha2.png)
 
 ## 📦|Como usar o projeto:
 1. Clone o repositório ou faça o download do arquivo zip do projeto.
