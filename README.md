@@ -6,6 +6,7 @@ Este é meu primeiro projeto utilizando C#, .Net e Windows Forms. O projeto cons
 - C#
 - .Net
 - Windows Forms
+- MySQL
 - Visual Studio 2022
 
 ## 📷|Screenshots:
